@@ -1,0 +1,22 @@
+{
+  "name": "tienda-de-ropa",
+  "version": "1.0.0",
+  "description": "Tienda de ropa",
+  "main": "index.js",
+  "scripts": {
+    "build": "node-sass --include-path sass ./sass/index.scss ./css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martin-centurion/tienda-de-ropa.git"
+  },
+  "author": "Martin Centurion",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martin-centurion/tienda-de-ropa/issues"
+  },
+  "homepage": "https://github.com/martin-centurion/tienda-de-ropa#readme",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
