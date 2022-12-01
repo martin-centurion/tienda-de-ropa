@@ -1,3 +1,42 @@
-header {
-  background-color: aqua;
-  font-size: 20px; }
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none; }
+
+.container {
+  width: 1200px;
+  margin: auto; }
+
+body {
+  font-family: "Roboto", sans-serif; }
+
+.header {
+  margin-bottom: 40px; }
+  .header__encabezado {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    background-color: #222d31;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px; }
+  .header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Roboto", sans-serif; }
+    .header__content ul {
+      display: flex;
+      justify-content: space-around; }
+      .header__content ul li {
+        margin: 0 20px;
+        font-size: 16px; }
+        .header__content ul li a {
+          text-decoration: none;
+          color: #222d31;
+          transition: color 0.3s; }
+          .header__content ul li a:hover {
+            color: #cae7ae;
+            border-bottom: solid 2px #cae7ae;
+            padding-bottom: 10px; }

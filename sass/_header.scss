@@ -1,5 +1,41 @@
-header{
-    background-color: aqua;
-    font-size: 20px;
-    font-weight: normal;
+.header {
+    margin-bottom: 40px;
+
+    &__encabezado {
+        text-align: center;
+        font-family: $FuenteSecundaria;
+        font-size: 14px;
+        background-color: $ColorPrimario;
+        color: white;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: $FuentePrimaria;
+
+            ul {
+                display: flex;
+                justify-content: space-around;
+
+                li {
+                    margin: 0 20px;
+                    font-size: 16px;
+                    a {
+                        text-decoration: none;
+                        color: $ColorPrimario;
+                        transition: color 0.3s;
+
+                        &:hover{
+                            color: $ColorSecundario;
+                            border-bottom: solid 2px $ColorSecundario;
+                            padding-bottom: 10px;
+                        }
+                    }
+                }
+            }
+    }
 }
