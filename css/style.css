@@ -24,14 +24,17 @@ body {
   .header__content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    font-family: "Roboto", sans-serif; }
+    align-items: center; }
     .header__content ul {
       display: flex;
       justify-content: space-around; }
       .header__content ul li {
         margin: 0 20px;
-        font-size: 16px; }
+        font-size: 14px;
+        font-family: "Roboto", sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px; }
         .header__content ul li a {
           text-decoration: none;
           color: #222d31;
@@ -40,3 +43,34 @@ body {
             color: #cae7ae;
             border-bottom: solid 2px #cae7ae;
             padding-bottom: 10px; }
+
+.banner {
+  background-image: url(../img/banner.jpg);
+  background-repeat: no-repeat;
+  height: 700px; }
+  .banner__content {
+    display: flex;
+    flex-direction: column;
+    padding: 300px 0 0 80px; }
+    .banner__content h1 {
+      color: white;
+      font-size: 100px;
+      padding-bottom: 20px;
+      font-family: "DM Serif Display", serif; }
+    .banner__content p {
+      color: white;
+      font-size: 25px;
+      letter-spacing: 1px;
+      padding-bottom: 40px;
+      font-family: "DM Serif Display", serif; }
+    .banner__content a {
+      color: white;
+      font-family: "Roboto", sans-serif;
+      font-weight: 100;
+      text-transform: uppercase;
+      font-size: 16px;
+      letter-spacing: 3px;
+      text-align: center;
+      padding: 15px;
+      border: solid 2px white;
+      width: 200px; }

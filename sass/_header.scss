@@ -15,7 +15,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-family: $FuentePrimaria;
 
             ul {
                 display: flex;
@@ -23,7 +22,11 @@
 
                 li {
                     margin: 0 20px;
-                    font-size: 16px;
+                    font-size: 14px;
+                    font-family: $FuentePrimaria;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    letter-spacing: 2px;
                     a {
                         text-decoration: none;
                         color: $ColorPrimario;
