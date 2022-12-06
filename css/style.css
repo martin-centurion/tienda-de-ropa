@@ -17,7 +17,7 @@ body {
     text-align: center;
     font-family: "Poppins", sans-serif;
     font-size: 14px;
-    background-color: black;
+    background-color: #272727;
     color: white;
     padding: 20px;
     margin-bottom: 30px; }
@@ -28,7 +28,7 @@ body {
     .header__content-logo a {
       font-family: "DM Serif Display", serif;
       color: #272727;
-      font-size: 25px; }
+      font-size: 40px; }
     .header__content ul {
       display: flex;
       justify-content: space-around; }
@@ -41,7 +41,7 @@ body {
         letter-spacing: 2px; }
         .header__content ul li a {
           text-decoration: none;
-          color: black;
+          color: #7a7a7a;
           transition: color 0.3s; }
           .header__content ul li a:hover {
             color: #272727;
@@ -63,7 +63,7 @@ body {
       font-family: "DM Serif Display", serif; }
     .banner__content p {
       color: white;
-      background-color: black;
+      background-color: #272727;
       width: 680px;
       font-size: 20px;
       padding: 10px;
@@ -212,10 +212,39 @@ body {
       font-size: 12px;
       letter-spacing: 3px;
       padding: 15px;
-      background-color: black;
+      background-color: #272727;
       transition: all 0.3s; }
       .info__content a:hover {
         background-color: white;
         color: black; }
     .info__content__content-img {
       width: 500px; }
+
+.footer {
+  margin-top: 40px;
+  padding: 50px 0 50px;
+  background-color: rgba(202, 231, 134, 0.6); }
+  .footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .footer__content-logo a {
+      font-family: "DM Serif Display", serif;
+      font-size: 30px;
+      color: #272727; }
+    .footer__content-navbar ul {
+      display: flex; }
+    .footer__content-navbar li {
+      margin: 0 15px 0 15px; }
+    .footer__content-navbar a {
+      font-family: "Poppins", sans-serif;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #272727;
+      font-size: 14px;
+      transition: color 0.3s;
+      letter-spacing: 1px; }
+      .footer__content-navbar a:hover {
+        color: #7a7a7a;
+        border-bottom: solid 2px #7a7a7a;
+        padding-bottom: 10px; }

@@ -1,0 +1,45 @@
+.footer {
+    margin-top: 40px;
+    padding: 50px 0 50px;
+    background-color: $ColorTerciario;
+
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &-logo a {
+                font-family: $FuenteTerciaria;
+                font-size: 30px;
+                color: $ColorSecundario;
+            }
+
+            &-navbar {
+
+                ul {
+                    display: flex;
+                }
+                
+                li {
+                    margin: 0 15px 0 15px;
+                }
+                
+                a {
+                    font-family: $FuenteSecundaria;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    color: $ColorSecundario;
+                    font-size: 14px;
+                    transition: color 0.3s;
+                    letter-spacing: 1px;
+    
+                    &:hover{
+                        color: $ColorPrimario;
+                        border-bottom: solid 2px $ColorPrimario;
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+
+        }
+}
