@@ -5,7 +5,7 @@
   list-style: none; }
 
 .container {
-  width: 1200px;
+  width: 1400px;
   margin: auto; }
 
 body {
@@ -49,24 +49,27 @@ body {
             padding-bottom: 10px; }
 
 .banner {
-  background-image: url(../img/banner.jpg);
+  background-image: url(../img/banner-2.jpg);
   background-repeat: no-repeat;
   height: 700px; }
   .banner__content {
     display: flex;
     flex-direction: column;
-    padding: 300px 0 0 80px; }
+    padding: 270px 0 0 80px; }
     .banner__content h1 {
       color: white;
-      font-size: 100px;
-      padding-bottom: 20px;
+      font-size: 150px;
+      padding-bottom: 10px;
       font-family: "DM Serif Display", serif; }
     .banner__content p {
       color: white;
-      font-size: 25px;
-      letter-spacing: 1px;
-      padding-bottom: 40px;
-      font-family: "DM Serif Display", serif; }
+      background-color: black;
+      width: 680px;
+      font-size: 20px;
+      padding: 10px;
+      margin-bottom: 40px;
+      font-weight: 100;
+      font-family: "Poppins", sans-serif; }
     .banner__content a {
       color: white;
       font-family: "Roboto", sans-serif;
@@ -76,13 +79,12 @@ body {
       letter-spacing: 3px;
       text-align: center;
       padding: 15px;
-      border: solid 2px white;
+      border: solid 1px white;
       width: 200px;
       transition: all 0.3s; }
       .banner__content a:hover {
-        background-color: black;
-        color: white;
-        border: solid 2px black; }
+        background-color: white;
+        color: black; }
 
 .card {
   display: grid;
@@ -94,7 +96,8 @@ body {
     text-transform: capitalize;
     text-align: center;
     height: 500px;
-    background-image: url(../img/card-1.jpg); }
+    background-image: url(../img/card-1.jpg);
+    background-size: cover; }
     .card .card-1 h2 {
       padding: 300px 0 30px 0;
       color: white;
@@ -108,11 +111,11 @@ body {
       font-size: 12px;
       letter-spacing: 3px;
       padding: 15px;
-      border: solid 2px white;
+      border: solid 1px white;
       transition: all 0.3s; }
       .card .card-1 a:hover {
-        background-color: black;
-        border: solid 2px black; }
+        background-color: white;
+        color: black; }
   .card .card-2 {
     font-family: "DM Serif Display", serif;
     font-size: 24px;
@@ -120,6 +123,7 @@ body {
     text-align: center;
     height: 500px;
     background-image: url(../img/card-2.jpg);
+    background-size: cover;
     margin: 0 20px 0 20px; }
     .card .card-2 h2 {
       padding: 300px 0 30px 0;
@@ -134,18 +138,19 @@ body {
       font-size: 12px;
       letter-spacing: 3px;
       padding: 15px;
-      border: solid 2px white;
+      border: solid 1px white;
       transition: all 0.3s; }
       .card .card-2 a:hover {
-        background-color: black;
-        border: solid 2px black; }
+        background-color: white;
+        color: black; }
   .card .card-3 {
     font-family: "DM Serif Display", serif;
     font-size: 24px;
     text-transform: capitalize;
     text-align: center;
     height: 500px;
-    background-image: url(../img/card-3.jpg); }
+    background-image: url(../img/card-3.jpg);
+    background-size: cover; }
     .card .card-3 h2 {
       padding: 300px 0 30px 0;
       color: white;
@@ -159,8 +164,58 @@ body {
       font-size: 12px;
       letter-spacing: 3px;
       padding: 15px;
-      border: solid 2px white;
+      border: solid 1px white;
       transition: all 0.3s; }
       .card .card-3 a:hover {
-        background-color: black;
-        border: solid 2px black; }
+        background-color: white;
+        color: black; }
+
+.categorias {
+  margin-bottom: 40px; }
+  .categorias__content-title {
+    font-family: "DM Serif Display", serif;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 40px; }
+  .categorias__content {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); }
+    .categorias__content article {
+      text-align: center; }
+      .categorias__content article img {
+        margin-bottom: 10px; }
+      .categorias__content article p {
+        font-family: "Poppins", sans-serif; }
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  .info__content {
+    padding: 50px;
+    background-color: rgba(202, 231, 134, 0.6);
+    width: 800px; }
+    .info__content h2 {
+      font-family: "DM Serif Display", serif;
+      font-size: 60px;
+      font-weight: 400;
+      margin-bottom: 40px; }
+    .info__content p {
+      font-family: "Poppins", sans-serif;
+      font-size: 18px;
+      margin-bottom: 100px; }
+    .info__content a {
+      color: white;
+      font-family: "Roboto", sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 3px;
+      padding: 15px;
+      background-color: black;
+      transition: all 0.3s; }
+      .info__content a:hover {
+        background-color: white;
+        color: black; }
+    .info__content__content-img {
+      width: 500px; }

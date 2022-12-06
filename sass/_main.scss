@@ -1,24 +1,27 @@
 .banner{
-    background-image: url(../img/banner.jpg);
+    background-image: url(../img/banner-2.jpg);
     background-repeat: no-repeat;
     height: 700px;
 
           &__content {
                 display: flex;
                 flex-direction: column;
-                padding: 300px 0 0 80px;
+                padding: 270px 0 0 80px;
                         h1 {
                             color: white;
-                            font-size: 100px;
-                            padding-bottom: 20px;
+                            font-size: 150px;
+                            padding-bottom: 10px;
                             font-family: $FuenteTerciaria;
                         }
                         p {
                             color: white;
-                            font-size: 25px;
-                            letter-spacing: 1px;
-                            padding-bottom: 40px;
-                            font-family: $FuenteTerciaria;
+                            background-color: $ColorPrimario;
+                            width: 680px;
+                            font-size: 20px;
+                            padding: 10px;
+                            margin-bottom: 40px;
+                            font-weight: 100;
+                            font-family: $FuenteSecundaria;
                         }
                         a {
                             color: white;
@@ -29,14 +32,13 @@
                             letter-spacing: 3px;
                             text-align: center;
                             padding: 15px;
-                            border: solid 2px white;
+                            border: solid 1px white;
                             width: 200px;
                             transition: all 0.3s;
 
                             &:hover {
-                                background-color: black;
-                                color: white;
-                                border: solid 2px black;
+                                background-color: white;
+                                color: black;
                             }
                         }
           }  
@@ -54,6 +56,7 @@
             text-align: center;
             height: 500px;
             background-image: $fondo;
+            background-size: cover;
 
                     h2 {
                         padding: 300px 0 30px 0;
@@ -70,12 +73,12 @@
                         font-size: 12px;
                         letter-spacing: 3px;
                         padding: 15px;
-                        border: solid 2px white;
+                        border: solid 1px white;
                         transition: all 0.3s;
 
                         &:hover {
-                            background-color: black;
-                            border: solid 2px black;
+                            background-color: white;
+                            color: black;
                         }
                     }
         }
@@ -92,4 +95,76 @@
         .card-3{
             @include card-base(url(../img/card-3.jpg));
         }
+}
+.categorias {
+    margin-bottom: 40px;
+
+        &__content-title {
+            font-family: $FuenteTerciaria;
+            font-size: 30px;
+            text-align: center;
+            font-weight: 400;
+            margin-bottom: 40px;
+        }
+
+        &__content {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            
+                article {
+                text-align: center;
+
+                    img {
+                        margin-bottom: 10px;
+                    }
+
+                    p {
+                        font-family: $FuenteSecundaria;
+                    }
+            }
+        }
+}
+
+.info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+        &__content {
+            padding: 50px;
+            background-color: $ColorTerciario;
+            width: 800px;
+
+            h2 {
+                font-family: $FuenteTerciaria;
+                font-size: 60px;
+                font-weight: 400;
+                margin-bottom: 40px;
+            }
+            p {
+                font-family: $FuenteSecundaria;
+                font-size: 18px;
+                margin-bottom: 100px;
+            }
+            a {
+                color: white;
+                font-family: $FuentePrimaria;
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 12px;
+                letter-spacing: 3px;
+                padding: 15px;
+                background-color: $ColorPrimario;
+                transition: all 0.3s;
+
+                        &:hover {
+                            background-color: white;
+                            color: black;
+                        }
+             }
+
+            &__content-img {
+                 width: 500px;
+
+             }
+    }
 }
