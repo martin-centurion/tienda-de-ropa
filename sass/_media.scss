@@ -1,0 +1,19 @@
+@media (max-width: 1200px){
+    .container {
+        width: 768px;
+    }
+
+    .header__content {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+            &-logo {
+                margin-bottom: 20px;
+            }
+    }
+
+    .banner {
+        height: 700px;
+        width: 100%;
+    }
+}

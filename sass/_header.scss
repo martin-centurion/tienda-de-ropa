@@ -37,12 +37,12 @@
                     letter-spacing: 2px;
                     a {
                         text-decoration: none;
-                        color: $ColorPrimario;
+                        color: $ColorSecundario;
                         transition: color 0.3s;
 
                         &:hover{
-                            color: $ColorSecundario;
-                            border-bottom: solid 2px $ColorSecundario;
+                            color: $ColorPrimario;
+                            border-bottom: solid 2px $ColorPrimario;
                             padding-bottom: 10px;
                         }
                     }
