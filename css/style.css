@@ -194,7 +194,8 @@ body {
   .info__content {
     padding: 50px;
     background-color: rgba(202, 231, 134, 0.6);
-    width: 800px; }
+    width: 800px;
+    height: 470px; }
     .info__content h2 {
       font-family: "DM Serif Display", serif;
       font-size: 60px;
@@ -283,12 +284,88 @@ body {
 @media (max-width: 1200px) {
   .container {
     width: 768px; }
-  .header__content {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center; }
-    .header__content-logo {
-      margin-bottom: 20px; }
   .banner {
-    height: 700px;
-    width: 100%; } }
+    width: 100%; }
+    .banner h1 {
+      font-size: 6rem; }
+  .card {
+    width: 100%; }
+    .card-base h2 {
+      font-size: 1.8rem; }
+  .info {
+    display: grid;
+    grid-template-columns: 1fr; }
+    .info__content {
+      width: 700px;
+      padding: 34px; }
+    .info__content-img {
+      display: none; }
+  .footer__content {
+    padding: 0 30px 0 30px; } }
+
+@media (max-width: 768px) {
+  .container {
+    width: 490px; }
+  .header__content {
+    align-items: center;
+    flex-flow: column wrap;
+    align-content: center; }
+    .header__content ul li {
+      margin: 1.2rem; }
+  .banner {
+    width: 100%; }
+    .banner h1 {
+      font-size: 5rem; }
+    .banner p {
+      font-size: 1.5rem;
+      width: 430px;
+      padding: 0.5rem; }
+  .card {
+    display: grid;
+    grid-template-columns: 1fr; }
+    .card .card-2 {
+      margin: 0; }
+  .categorias__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); }
+  .info__content {
+    width: 430px;
+    padding: 30px; }
+    .info__content h2 {
+      font-size: 2rem; }
+    .info__content p {
+      font-size: 1rem; }
+  .footer__content {
+    display: flex;
+    flex-flow: column wrap; }
+    .footer__content ul li {
+      margin: 1.2rem; } }
+
+@media (max-width: 490px) {
+  .container {
+    width: 320px; }
+  .banner {
+    width: 100%; }
+    .banner h1 {
+      font-size: 4rem; }
+    .banner p {
+      font-size: 1rem;
+      width: 320px;
+      padding: 0.2rem; }
+  .categorias__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
+  .info__content {
+    width: 290px;
+    padding: 15px; }
+    .info__content h2 {
+      font-size: 2rem; }
+    .info__content p {
+      font-size: 1rem;
+      margin-bottom: 3.5rem; }
+  .footer__content-navbar {
+    display: none; } }
+
+@media (max-width: 340px) {
+  .container {
+    width: 300px; } }
