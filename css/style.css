@@ -222,9 +222,14 @@ body {
 
 .productos {
   margin: 1rem;
-  padding: 1rem;
-  display: inline-block;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   text-align: center; }
+  .productos_img {
+    width: 420px;
+    height: 420px;
+    object-fit: contain;
+    margin-top: 1rem; }
   .productos h2 {
     font-family: "Poppins", sans-serif;
     margin-bottom: 10px; }
@@ -232,7 +237,7 @@ body {
     font-family: "Poppins", sans-serif;
     margin-bottom: 30px; }
   .productos a {
-    margin-top: 30px;
+    margin-top: 10px;
     color: white;
     font-family: "Roboto", sans-serif;
     font-weight: bold;

@@ -171,9 +171,17 @@
 
 .productos {
     margin: 1rem;
-    padding: 1rem;
-    display: inline-block;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     text-align: center;
+
+        &_img {
+            width: 420px;
+            height: 420px;
+            object-fit: contain;
+            margin-top: 1rem;
+        }
+
         h2 {
             font-family: $FuenteSecundaria;
             margin-bottom: 10px;
@@ -183,7 +191,7 @@
             margin-bottom: 30px;
         }
         a {
-            margin-top: 30px;
+            margin-top: 10px;
             color: white;
             font-family: $FuentePrimaria;
             font-weight: bold;
@@ -199,4 +207,6 @@
                         color: black;
                     }
          }
+
 }
+

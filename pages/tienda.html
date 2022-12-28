@@ -18,26 +18,25 @@
         </div>
         <div class="header__content container">
             <div class="header__content-logo">
-                <a href="./index.html">TiendaShop</a>
+                <a href="../index.html">TiendaShop</a>
             </div>
             <div>
                 <nav class="header__content-navbar">
                     <ul>
                         <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="./pages/tienda.html">Tienda</a></li>
+                        <li><a href="./tienda.html">Tienda</a></li>
                         <li><a href="#">Nosotros</a></li>
                         <li><a href="#">Contacto</a></li>
-                        <li><a href="#">Carrito</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
-    <main>
+    <main class="container">
         
-        <section class="info container">
+        <section class="info">
             <div class="info__content">
-                <h2>Pre Entrega Proyecto Final</h2>
+                <h2>Indumentaria... con Actitud</h2>
                 <p>En nuestra tienda de ropa confeccionamos "Street Style" para poder ofrecer indumentaria para cada instante de la vida. Somos consciente que en cada momento de nuestra vida necesitamos expresarnos, nuestra idea es poder acompañarte en cada momento de tu día potenciando tu expresión.</p>
                 <a href="#">Leer más</a>
             </div>
@@ -45,11 +44,29 @@
                 <img src="../img/info.jpg" alt="TiendaShop">
             </div>
         </section>
-        <section class="container">
-            <div id="contenedorProductos"></div>
-            <!--Contenedor de todos los productos -->
+        <section class="productos container">
+                <div class="productos" id="contenedorProductos"></div>
+                <!--Contenedor de todos los productos -->
+                    <!-- CARRITO DE COMPRAS -->
 
         </section>
+        <section class="productos">
+            <div class="container">
+                <hr>
+                <h2>Carrito de compras</h2>
+                <h3>Compra <span id="total"></span></h3>
+                <div>
+                    <a id="verCarrito">Ver carrito</a>
+                    <a id="vaciarCarrito">Vaciar carrito</a>
+                </div>
+            </div>
+        </section>
+        <section class="productos container">
+            <div class="productos" id="contenedorCarrito" class="row"></div>
+        </section>
+            
+            
+        
     </main>
     <footer class="footer">
         <div class="container">
@@ -60,11 +77,10 @@
                 <div>
                     <nav class="footer__content-navbar">
                         <ul>
-                            <li><a href="./index.html">Inicio</a></li>
-                            <li><a href="./pages/tienda.html">Tienda</a></li>
+                            <li><a href="../index.html">Inicio</a></li>
+                            <li><a href="./tienda.html">Tienda</a></li>
                             <li><a href="#">Nosotros</a></li>
                             <li><a href="#">Contacto</a></li>
-                            <li><a href="#">Carrito</a></li>
                         </ul>
                     </nav>
                 </div>
