@@ -199,3 +199,15 @@
         width: 300px;
     }
 }
+
+@media (max-width: 300px) {
+    .container {
+        width: 260px;
+    }
+}
+
+@media (max-width: 260px) {
+    .container {
+        width: 240px;
+    }
+}
