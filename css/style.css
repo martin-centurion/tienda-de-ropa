@@ -324,7 +324,7 @@ body {
     flex-flow: column wrap;
     align-content: center; }
     .header__content ul li {
-      margin: 1.2rem; }
+      margin: 0.5rem; }
   .banner {
     width: 100%; }
     .banner h1 {
@@ -356,6 +356,8 @@ body {
 @media (max-width: 490px) {
   .container {
     width: 320px; }
+  .header__content ul {
+    flex-wrap: wrap; }
   .banner {
     width: 100%; }
     .banner h1 {
@@ -383,3 +385,11 @@ body {
 @media (max-width: 340px) {
   .container {
     width: 300px; } }
+
+@media (max-width: 300px) {
+  .container {
+    width: 260px; } }
+
+@media (max-width: 260px) {
+  .container {
+    width: 240px; } }

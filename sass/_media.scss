@@ -73,8 +73,9 @@
             align-content: center;
     
             ul {
+
                     li {
-                        margin: 1.2rem;
+                        margin: 0.5rem;
                     }
                 } 
             }
@@ -141,6 +142,15 @@
     .container {
         width: 320px;
     }
+
+    .header {
+        &__content {
+    
+            ul {
+                flex-wrap: wrap;
+                } 
+            }
+        }
 
     .banner {
         width: 100%;
