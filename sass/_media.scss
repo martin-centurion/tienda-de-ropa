@@ -191,6 +191,14 @@
     }
 
     .productos {
+
+        &__carrito {
+            &-navbar{
+                display: flex;
+                flex-wrap: column wrap;
+                justify-content: space-between;
+            }
+        }
         &_img {
             width: 100%;
         }

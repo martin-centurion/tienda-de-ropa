@@ -171,16 +171,23 @@
 }
 
 .productos {
-    margin: 1rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     text-align: center;
+
+    &__carrito {
+        margin: 2rem 0 2rem;
+    }
+
+    hr {
+        margin: 1rem 0;
+    }
 
         &_img {
             width: 420px;
             height: 420px;
             object-fit: contain;
-            margin-top: 1rem;
+            margin-top: 3rem;
         }
 
         h2 {

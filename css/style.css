@@ -222,15 +222,18 @@ body {
       width: 500px; }
 
 .productos {
-  margin: 1rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   text-align: center; }
+  .productos__carrito {
+    margin: 2rem 0 2rem; }
+  .productos hr {
+    margin: 1rem 0; }
   .productos_img {
     width: 420px;
     height: 420px;
     object-fit: contain;
-    margin-top: 1rem; }
+    margin-top: 3rem; }
   .productos h2 {
     font-family: "Poppins", sans-serif;
     margin-bottom: 10px; }
@@ -377,6 +380,10 @@ body {
     .info__content p {
       font-size: 1rem;
       margin-bottom: 3.5rem; }
+  .productos__carrito-navbar {
+    display: flex;
+    flex-wrap: column wrap;
+    justify-content: space-between; }
   .productos_img {
     width: 100%; }
   .footer__content-navbar {
