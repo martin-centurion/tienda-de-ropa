@@ -1,4 +1,4 @@
-/* TU ALMACEN.COM - CARRITO DE COMPRAS */
+/* TIENDA SHOP */
 
 //1) Mostrar productos en el HTML de forma dinamica.
 //2) Agregar productos en el carrito.
@@ -54,10 +54,10 @@ const mostrarProductos = () => {
                 <div>
                 <div>
                     <img src="${producto.img}" class="productos_img" alt="${producto.nombre}">
-                    <div class= "">
+                    <div>
                         <h2>${producto.nombre}</h2>
                         <h3> $${producto.precio} </h3>
-                        <a class"btn" id="boton ${producto.id}"> Agregar al Carrito </a>
+                        <button class="btn" id="boton ${producto.id}"> Agregar al Carrito </button>
                     </div>
                 </div>
                 </div>
@@ -111,11 +111,11 @@ const mostrarCarrito = () => {
                 <div>
                 <div>
                     <img src="${producto.img}" class="productos_img" alt="${producto.nombre}">
-                    <div class= "">
+                    <div>
                         <h2>${producto.nombre}</h2>
                         <h3> $${producto.precio} </h3>
                         <h3> Cantidad ${producto.cantidad} </h3>
-                        <a id="eliminar ${producto.id}">Eliminar producto</a>
+                        <button class="btn" id="eliminar ${producto.id}">Eliminar producto</button>
                     </div>
                 </div>
                 </div>
@@ -156,7 +156,7 @@ vaciarCarrito.addEventListener("click", () => {
 
 //Funcion que elimina todo del carrito: si lo hacen con const no funciona
 
-const eliminarTodoElCarrito = () => {
+function eliminarTodoElCarrito() {
     carrito = [];
     mostrarCarrito();
 

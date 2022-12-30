@@ -240,7 +240,7 @@ body {
   .productos h3 {
     font-family: "Poppins", sans-serif;
     margin-bottom: 30px; }
-  .productos a {
+  .productos .btn {
     margin-top: 10px;
     color: white;
     font-family: "Roboto", sans-serif;
@@ -251,7 +251,7 @@ body {
     padding: 15px;
     background-color: #272727;
     transition: all 0.3s; }
-    .productos a:hover {
+    .productos .btn:hover {
       background-color: white;
       color: black; }
 
@@ -291,10 +291,9 @@ body {
     width: 100%; }
     .banner h1 {
       font-size: 6rem; }
-  .card {
-    width: 100%; }
-    .card-base h2 {
-      font-size: 1.8rem; }
+  .card-base h2 {
+    font-size: 1.8rem;
+    padding: 500px 0 30px 0; }
   .info {
     display: grid;
     grid-template-columns: 1fr; }
@@ -330,6 +329,8 @@ body {
       margin: 0.5rem; }
   .banner {
     width: 100%; }
+    .banner__content {
+      padding: 270px 0 0 40px; }
     .banner h1 {
       font-size: 5rem; }
     .banner p {

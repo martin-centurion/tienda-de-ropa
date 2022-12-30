@@ -12,12 +12,12 @@
     }
 
     .card {
-        width: 100%;
-
-        &-base {
-            h2 {
-                font-size: 1.8rem;
-            }
+       &-base {
+                h2 {
+                    font-size: 1.8rem;
+                    padding: 500px 0 30px 0;
+                }
+            
         }
     }
 
@@ -56,6 +56,7 @@
         width: 490px;
     }
 
+
     .productos {
         display: grid;
         grid-template-columns: 1fr;
@@ -83,6 +84,10 @@
     
     .banner {
         width: 100%;
+
+        &__content {
+            padding: 270px 0 0 40px;
+        }
 
         h1 {
             font-size: 5rem;
