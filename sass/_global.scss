@@ -13,3 +13,41 @@
 body {
     font-family: $FuentePrimaria;
 }
+
+$redesSociales: (
+    facebook: $ColorSecundario,
+    instagram: $ColorSecundario,
+);
+
+@each $nombre, $color in $redesSociales {
+    .link-#{$nombre}{
+        margin: 0 5px;
+        padding: 10px;
+        border-radius: 10px;
+        text-decoration: none;
+        background-color: $color;
+    }
+}
+
+.whatsapp-icono {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    font-size: 40px;
+
+    a {
+        color: white;
+        background-color: $ColorWhatsapp;
+        text-decoration: none;
+        border-radius: 50%;
+        padding: 15px 20px;
+        transition: all 0.5s;
+
+        &:hover {
+            color: $ColorWhatsapp;
+            background-color: white;
+        }
+    }
+
+
+}

@@ -1,5 +1,8 @@
 .header {
-    margin-bottom: 30px;
+    position: sticky;
+    top: 0;
+    background-color: $ColorHeader;
+    height: 17.5vh;
 
     &__encabezado {
         text-align: center;
@@ -24,29 +27,50 @@
                 }
             }
 
-            ul {
-                display: flex;
-                justify-content: space-around;
-
-                li {
-                    margin: 0 20px;
-                    font-size: 14px;
-                    font-family: $FuentePrimaria;
-                    text-transform: uppercase;
-                    font-weight: bold;
-                    letter-spacing: 2px;
-                    a {
-                        text-decoration: none;
-                        color: $ColorSecundario;
-                        transition: color 0.3s;
-
-                        &:hover{
-                            color: $ColorPrimario;
-                            border-bottom: solid 2px $ColorPrimario;
-                            padding-bottom: 10px;
+            &-navbar {
+                ul {
+                    display: flex;
+                    justify-content: space-around;
+    
+                    li {
+                        margin: 0 20px;
+                        font-size: 14px;
+                        font-family: $FuentePrimaria;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        letter-spacing: 2px;
+                        a {
+                            text-decoration: none;
+                            color: $ColorSecundario;
+                            transition: color 0.3s;
+    
+                            &:hover{
+                                color: $ColorPrimario;
+                                border-bottom: solid 2px $ColorPrimario;
+                                padding-bottom: 10px;
+                            }
                         }
                     }
                 }
+                .active {
+                    color: $ColorPrimario;
+                    border-bottom: solid 2px $ColorTerciarioOscuro;
+                    padding-bottom: 10px;
+                }
+
             }
+
+            &-rrss {
+                ul {
+                    display: flex;
+                    justify-content: space-around;
+                }
+
+                li {
+                    margin: 0 1rem;
+                }
+            }
+            
     }
 }
+

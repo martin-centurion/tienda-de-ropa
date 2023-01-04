@@ -219,3 +219,33 @@
 
 }
 
+.btn-rrss {
+    color: white;
+    padding: 12px;
+    border-radius: 100%;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.5s;
+    text-align: center;
+
+    &:hover {
+        color: $ColorIconos;
+        background-color: white;
+        border: none;
+    }
+}
+
+.btn-facebook {
+@extend .btn-rrss;
+background-color: $ColorIconos;
+}
+
+.btn-instagram {
+@extend .btn-rrss;
+background-color: $ColorIconos;
+}
+
+.btn-carrito {
+@extend .btn-rrss;
+background-color: $ColorTerciarioOscuro;
+}
