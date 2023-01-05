@@ -1,8 +1,6 @@
 .header {
-    position: sticky;
-    top: 0;
     background-color: $ColorHeader;
-    height: 17.5vh;
+    margin-bottom: 2rem;
 
     &__encabezado {
         text-align: center;
