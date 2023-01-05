@@ -288,40 +288,75 @@ body {
     .info__content__content-img {
       width: 500px; }
 
-.productos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.tienda-title {
+  margin: 2rem 0 1rem; }
+  .tienda-title h2 {
+    font-size: 3rem;
+    letter-spacing: .2rem;
+    font-family: "DM Serif Display", serif; }
+  .tienda-title p {
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif; }
+
+.tienda__productos h3 {
+  font-size: 2rem;
+  margin-top: 2rem;
   text-align: center; }
-  .productos__carrito {
-    margin: 2rem 0 2rem; }
-  .productos hr {
-    margin: 1rem 0; }
-  .productos_img {
-    width: 420px;
-    height: 420px;
-    object-fit: contain;
-    margin-top: 3rem; }
-  .productos h2 {
-    font-family: "Poppins", sans-serif;
-    margin-bottom: 10px; }
-  .productos h3 {
-    font-family: "Poppins", sans-serif;
-    margin-bottom: 30px; }
-  .productos .btn {
-    margin-top: 10px;
+
+.tienda__productos-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  color: #272727; }
+  .tienda__productos-content-btn-vaciar {
+    cursor: pointer;
     color: white;
     font-family: "Roboto", sans-serif;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: .8rem;
     letter-spacing: 3px;
-    padding: 15px;
+    padding: 1rem;
     background-color: #272727;
     transition: all 0.3s;
-    cursor: pointer; }
-    .productos .btn:hover {
+    margin-top: 2rem;
+    border: solid 2px #272727; }
+    .tienda__productos-content-btn-vaciar:hover {
       background-color: white;
-      color: black; }
+      color: #272727;
+      border: solid 2px #272727; }
+  .tienda__productos-content-img {
+    text-align: center;
+    margin: 2rem 0 2rem; }
+    .tienda__productos-content-img img {
+      width: 400px; }
+    .tienda__productos-content-img h2 {
+      font-size: 1.5rem;
+      margin-top: 1rem; }
+    .tienda__productos-content-img p {
+      font-size: 1rem;
+      margin-top: .5rem;
+      margin-bottom: 1.5rem; }
+    .tienda__productos-content-img a.btn {
+      cursor: pointer;
+      color: white;
+      font-family: "Roboto", sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: .8rem;
+      letter-spacing: 3px;
+      padding: 1rem;
+      background-color: #272727;
+      transition: all 0.3s;
+      margin-top: 2rem;
+      border: solid 2px #272727; }
+      .tienda__productos-content-img a.btn:hover {
+        background-color: white;
+        color: #272727;
+        border: solid 2px #272727; }
+      .tienda__productos-content-img a.btn i {
+        font-size: 1rem;
+        margin-right: .5rem; }
 
 .btn-rrss, .btn-facebook, .btn-instagram, .btn-carrito {
   color: white;

@@ -26,7 +26,7 @@
                 <nav class="header__content-navbar">
                     <ul>
                         <li><a href="../index.html">Inicio</a></li>
-                        <li class="active"><a href="./tienda.html">Tienda</a></li>
+                        <li class="active"><a href="./productos.html">Tienda</a></li>
                         <li><a href="./nosotros.html">Nosotros</a></li>
                         <li><a href="./contacto.html">Contacto</a></li>
                     </ul>
@@ -42,36 +42,30 @@
         </div>
     </header>
     <main class="container">
-        
-        <section class="info">
-            <div class="info__content">
-                <h2>Indumentaria... con Actitud</h2>
-                <p>En nuestra tienda de ropa confeccionamos "Street Style" para poder ofrecer indumentaria para cada instante de la vida. Somos consciente que en cada momento de nuestra vida necesitamos expresarnos, nuestra idea es poder acompañarte en cada momento de tu día potenciando tu expresión.</p>
-                <a href="./nosotros.html">Leer más</a>
+        <section class="tienda container">
+            <div class="tienda-title">
+                <h2>Solo... actitud</h2>
+                <p>Un mundo, nuestro mundo... por descubrir.</p>
             </div>
-            <div class="info__content-img">
-                <img src="../img/info.jpg" alt="TiendaShop">
-            </div>
-        </section>
-        <section class="productos">
-            <div class="productos__carrito container">
-                <h2>Carrito de compras</h2>
-                <div class="productos__carrito-navbar">
-                    <button class="btn" id="vaciarCarrito">Vaciar carrito</button>
+            <div class="tienda__productos">
+                <div class="tienda__productos-content" id="contenedorProductos">
+                    <!-- CONTENEDOR PRODUCTOS JS-->
                 </div>
-                
             </div>
-            
+            <div class="tienda__productos">
+                <h3>Carrito de compras</h3>
+                <div class="tienda__productos-content">
+                    <a class="tienda__productos-content-btn-vaciar" id="vaciarCarrito">Vaciar carrito</a>
+                </div>
+            </div>
         </section>
-        <section class="productos container">
-            <div class="productos" id="contenedorCarrito" class="row"></div>
+        <section class="tienda container">
+            <div class="tienda__productos">
+                <div class="tienda__productos-content" id="contenedorCarrito">
+                    <!-- CONTENEDOR PRODUCTOS JS-->
+                </div>
+            </div>
         </section>
-        <section class="productos container">
-                <div class="productos" id="contenedorProductos"></div>
-                <!--Contenedor de todos los productos -->
-
-        </section>     
-        
     </main>
     <footer class="footer">
         <div class="container">
@@ -83,7 +77,7 @@
                     <nav class="footer__content-navbar">
                         <ul>
                             <li><a href="../index.html">Inicio</a></li>
-                            <li><a href="./tienda.html">Tienda</a></li>
+                            <li><a href="./productos.html">Tienda</a></li>
                             <li><a href="./nosotros.html">Nosotros</a></li>
                             <li><a href="./contacto.html">Contacto</a></li>
                         </ul>
@@ -92,7 +86,7 @@
             </div>
         </div>
     </footer>
-    <script src="../js/main.js"></script>
+    <script src="../js/main-tienda.js"></script>
     <div class="whatsapp-icono">
         <a href="#"><i class="bi bi-whatsapp"></i></a>
     </div>
