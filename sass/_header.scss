@@ -50,6 +50,13 @@
                         }
                     }
                 }
+
+                &-cantidad {
+                    background-color: $ColorTerciarioOscuro;
+                    color: $ColorPrimario;
+                    padding: .25rem;
+                    border-radius: .25rem;
+                }
                 .active {
                     color: $ColorPrimario;
                     border-bottom: solid 2px $ColorTerciarioOscuro;

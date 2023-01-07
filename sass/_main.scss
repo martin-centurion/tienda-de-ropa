@@ -341,3 +341,101 @@ background-color: $ColorIconos;
 @extend .btn-rrss;
 background-color: $ColorTerciarioOscuro;
 }
+
+/* CARRITO */
+
+.carrito__vacio,
+.carrito__comprado {
+    color: $ColorPrimario;
+    padding-top: 1rem;
+}
+
+.contenedor__carrito {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &-productos {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    
+        &-item {
+            display: flex;
+            justify-content: space-between;
+            background-color: $ColorTerciario;
+            color: $ColorPrimario;
+            padding: .5rem;
+            padding-right: 1.5rem;
+            border-radius: 1rem;
+            align-items: center;
+    
+            small {
+               font-size: 0.75rem; 
+            }
+    
+            &-img{
+                width: 4rem;
+                border-radius: 1rem;
+            }
+    
+            &-eliminar {
+                border: 0;
+                font-size: 1rem;
+                background-color: transparent;
+                color: $ColorSecundario;
+                cursor: pointer;
+            }
+        
+        }
+    }
+
+    &__acciones {
+        display: flex;
+        justify-content: space-between;
+
+        &-izquierda {
+            &-vaciar{
+                border: 0;
+                background-color: $ColorSecundario;
+                padding: 1rem;
+                color: white;
+                border-radius: 1rem;
+                text-transform: uppercase;
+                cursor: pointer;
+            }
+        }
+
+        &-derecha {
+            display: flex;
+
+            &-total {
+                display: flex;
+                border: 0;
+                font-size: .75rem;
+                background-color: $ColorSecundario;
+                padding: 1rem;
+                color: white;
+                text-transform: uppercase;
+                border-top-left-radius: 1rem;
+                border-bottom-left-radius: 1rem;
+
+            }
+            &-comprar {
+                border: 0;
+                background-color: $ColorTerciarioOscuro;
+                padding: 1rem;
+                color: $ColorPrimario;
+                text-transform: uppercase;
+                cursor: pointer;
+                border-top-right-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+            }
+        }
+        
+    } 
+}
+
+.disabled {
+    display: none;
+}

@@ -29,6 +29,7 @@
                         <li class="active"><a href="./productos.html">Tienda</a></li>
                         <li><a href="./nosotros.html">Nosotros</a></li>
                         <li><a href="./contacto.html">Contacto</a></li>
+                        <li><a href="./carrito.html">Ver Carrito <span id="cantidad" class="header__content-navbar-cantidad">0</span></a></li>
                     </ul>
                 </nav>
             </div>
@@ -43,29 +44,35 @@
     </header>
     <main class="container">
         <section class="tienda container">
-            <div class="tienda-title">
+            <div class="tienda-header">
                 <h2>Solo... actitud</h2>
                 <p>Un mundo, nuestro mundo... por descubrir.</p>
+                <h4 id="titulo-principal">Solo... actitud</h4>
+                <ul>
+                    <li><a id="todos" class="boton-categoria" href="#">Todos</a></li>
+                    <li><a id="buzos" class="boton-categoria" href="#">Buzos</a></li>
+                    <li><a id="camisacos" class="boton-categoria" href="#">Camisacos</a></li>
+                </ul>
             </div>
             <div class="tienda__productos">
                 <div class="tienda__productos-content" id="contenedorProductos">
                     <!-- CONTENEDOR PRODUCTOS JS-->
                 </div>
             </div>
-            <div class="tienda__productos">
+            <!-- <div class="tienda__productos">
                 <h3>Carrito de compras</h3>
                 <div class="tienda__productos-content">
                     <a class="tienda__productos-content-btn-vaciar" id="vaciarCarrito">Vaciar carrito</a>
                 </div>
-            </div>
+            </div> -->
         </section>
-        <section class="tienda container">
+        <!-- <section class="tienda container">
             <div class="tienda__productos">
                 <div class="tienda__productos-content" id="contenedorCarrito">
-                    <!-- CONTENEDOR PRODUCTOS JS-->
+                    CONTENEDOR PRODUCTOS JS
                 </div>
             </div>
-        </section>
+        </section> -->
     </main>
     <footer class="footer">
         <div class="container">
@@ -86,7 +93,7 @@
             </div>
         </div>
     </footer>
-    <script src="../js/main-tienda.js"></script>
+    <script src="../js/main.js"></script>
     <div class="whatsapp-icono">
         <a href="#"><i class="bi bi-whatsapp"></i></a>
     </div>

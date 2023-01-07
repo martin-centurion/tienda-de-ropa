@@ -49,23 +49,19 @@ const contenedorProductos = document.getElementById("contenedorProductos");
 const mostrarProductos = () => {
     productos.forEach( producto => {
         const card = document.createElement("div");
-        card.classList.add("tienda");
+        card.classList.add("productos");
         card.innerHTML = `
-                        <div class="tienda__productos">
-                            <div class="tienda__productos-content">
-                                <div class="tienda__productos-content-img">
-                                    <div>
-                                        <img src="${producto.img}" alt="${producto.nombre}">
-                                    </div>
-                                    <div>
-                                        <h2>${producto.nombre}</h2>
-                                        <p>$${producto.precio}</p>
-                                        <a class="btn" id="boton ${producto.id}"><i class="bi bi-cart2"></i>Agregar al carrito</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        `;
+                <div>
+                <div>
+                    <img src="${producto.img}" class="productos_img" alt="${producto.nombre}">
+                    <div>
+                        <h2>${producto.nombre}</h2>
+                        <h3> $${producto.precio} </h3>
+                        <button class="btn" id="boton ${producto.id}"> Agregar al Carrito </button>
+                    </div>
+                </div>
+                </div>
+                        `
         contenedorProductos.appendChild(card);
 
         //Agregar productos al carrito:
@@ -110,23 +106,19 @@ const mostrarCarrito = () => {
 
     carrito.forEach(producto => {
         const card = document.createElement("div");
-        card.classList.add("tienda__productos");
+        card.classList.add("productos");
         card.innerHTML = `
-                            <div class="tienda__productos">
-                                <div class="tienda__productos-content">
-                                    <div class="tienda__productos-content-img">
-                                    <div>
-                                        <img src="${producto.img}" alt="${producto.nombre}">
-                                    </div>
-                                    <div>
-                                        <h2>${producto.nombre}</h2>
-                                        <p>$${producto.precio}</p>
-                                        <p>Cantidad ${producto.cantidad}</p>
-                                        <a class="btn" id="eliminar ${producto.id}"><i class="bi bi-cart2"></i>Eliminar del carrito</a>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
+                <div>
+                <div>
+                    <img src="${producto.img}" class="productos_img" alt="${producto.nombre}">
+                    <div>
+                        <h2>${producto.nombre}</h2>
+                        <h3> $${producto.precio} </h3>
+                        <h3> Cantidad ${producto.cantidad} </h3>
+                        <button class="btn" id="eliminar ${producto.id}">Eliminar producto</button>
+                    </div>
+                </div>
+                </div>
                         `
 
         contenedorCarrito.appendChild(card);
