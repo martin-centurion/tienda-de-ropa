@@ -43,7 +43,9 @@ body {
 
 .header {
   background-color: white;
-  margin-bottom: 2rem; }
+  position: sticky;
+  top: 0;
+  height: 17.5vh; }
   .header__encabezado {
     text-align: center;
     font-family: "Poppins", sans-serif;

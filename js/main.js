@@ -128,6 +128,7 @@ const contenedorProductos = document.getElementById("contenedorProductos");
 const botonesCategorias = document.querySelectorAll(".boton-categoria");
 const tituloPrincipal = document.querySelector("#titulo-principal");
 let botonesAgregar = document.querySelectorAll(".producto-agregar");
+const cantidad = document.querySelector("#cantidad");
 
 function mostrarProductos(productosElegidos) {
 
@@ -147,7 +148,7 @@ function mostrarProductos(productosElegidos) {
                                     <div>
                                         <h2>${producto.titulo}</h2>
                                         <p>$${producto.precio}</p>
-                                        <a class="btn producto-agregar" id="boton ${producto.id}"><i class="bi bi-cart2"></i>Agregar al carrito</a>
+                                        <a class="btn producto-agregar" id="${producto.id}"><i class="bi bi-cart2"></i>Agregar al carrito</a>
                                     </div>
                                 </div>
                             </div>
@@ -188,13 +189,39 @@ function actualizarBotonesAgregar() {
     });
 }
 
-const productosEnCarrito = [];
+let productosEnCarrito;
+
+let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
+
+if(productosEnCarritoLS){
+    productosEnCarrito = JSON.parse(productosEnCarritoLS);
+    actualizarCantidad();
+
+} else {
+    productosEnCarrito = [];
+}
+
 
 function agregarAlCarrito(e) {
 
     const idBoton = e.currentTarget.id;
     const productoAgregado = productos.find(producto => producto.id === idBoton)
 
-    if(productosEnCarrito.some(producto => productoid ))
-    productosEnCarrito.push(productoAgregado);
+    if(productosEnCarrito.some(producto => producto.id === idBoton)) {
+        const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
+        productosEnCarrito[index].cantidad++;
+
+    } else {
+        productoAgregado.cantidad = 1;
+        productosEnCarrito.push(productoAgregado);
+    }   
+
+    actualizarCantidad();
+
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+}
+
+function actualizarCantidad() {
+    let nuevaCantidad = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
+    cantidad.innerText = nuevaCantidad;
 }

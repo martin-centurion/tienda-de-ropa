@@ -27,9 +27,8 @@
                     <ul>
                         <li><a href="../index.html">Inicio</a></li>
                         <li class="active"><a href="./productos.html">Tienda</a></li>
-                        <li><a href="./nosotros.html">Nosotros</a></li>
                         <li><a href="./contacto.html">Contacto</a></li>
-                        <li><a href="./carrito.html">Ver Carrito <span id="cantidad" class="header__content-navbar-cantidad">0</span></a></li>
+                        <li><a href="./carrito.html">Ver Carrito</a></li>
                     </ul>
                 </nav>
             </div>
@@ -37,7 +36,7 @@
                 <ul>
                     <li><a href="#"><i class="bi bi-instagram btn-instagram"></i></a></li>
                     <li><a href="#"><i class="bi bi-facebook btn-facebook"></i></a></li>
-                    <li><a href="#"><i class="bi bi-cart2 btn-carrito" id="verCarrito"></i><span id="total">0</span></a></li>
+                    <li><a href="#"><i class="bi bi-cart2 btn-carrito"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -45,75 +44,12 @@
     <main class="container">
         <h2>Carrito</h2>
         <div class="contenedor__carrito">
-            <p class="carrito__vacio">Tu carrito esta vacio.<i class="bi bi-emoji-frown"></i></p>
+            <p id="carrito-vacio" class="carrito__vacio">Tu carrito esta vacio.<i class="bi bi-emoji-frown"></i></p>
 
-            <div class="contenedor__carrito-productos disabled">
-
-                <div class="contenedor__carrito-productos-item">
-                    <img class="contenedor__carrito-productos-item-img" src="../img/productos/buzos/buzo-azul.jpg" alt="Buzo Azul">
-                    <div class="contenedor__carrito-productos-item-titulo">
-                        <small>Titulo</small>
-                        <h3>Buzo Azul</h3>
-                    </div>
-                    <div class="contenedor__carrito-productos-item-cantidad">
-                        <small>Cantidad</small>
-                        <p>1</p>
-                    </div>
-                    <div class="contenedor__carrito-productos-item-precio">
-                        <small>Precio</small>
-                        <p>$14000</p>
-                    </div>
-                    <div class="contenedor__carrito-productos-item-subtotal">
-                        <small>Sub Total</small>
-                        <p>$14000</p>
-                    </div>
-                    <button class="contenedor__carrito-productos-item-eliminar"><i class="bi bi-trash"></i></button>
-                </div>
-
-                <div class="contenedor__carrito-productos-item">
-                    <img class="contenedor__carrito-productos-item-img" src="../img/productos/buzos/buzo-violeta.jpg" alt="Buzo Marrton">
-                    <div class="contenedor__carrito-productos-item-titulo">
-                        <small>Titulo</small>
-                        <h3>Buzo Marron</h3>
-                    </div>
-                    <div class="contenedor__carrito-productos-item-cantidad">
-                        <small>Cantidad</small>
-                        <p>1</p>
-                    </div>
-                    <div class="contenedor__carrito-productos-item-precio">
-                        <small>Precio</small>
-                        <p>$14500</p>
-                    </div>
-                    <div class="contenedor__carrito-productos-item-subtotal">
-                        <small>Sub Total</small>
-                        <p>$14500</p>
-                    </div>
-                    <button class="contenedor__carrito-productos-item-eliminar"><i class="bi bi-trash"></i></button>
-                </div>
-
-                <div class="contenedor__carrito-productos-item">
-                    <img class="contenedor__carrito-productos-item-img" src="../img/productos/buzos/buzo-salmon.jpg" alt="Buzo Azul">
-                    <div class="contenedor__carrito-productos-item-titulo">
-                        <small>Titulo</small>
-                        <h3>Buzo Salmon</h3>
-                    </div>
-                    <div class="contenedor__carrito-productos-item-cantidad">
-                        <small>Cantidad</small>
-                        <p>1</p>
-                    </div>
-                    <div class="contenedor__carrito-productos-item-precio">
-                        <small>Precio</small>
-                        <p>$15000</p>
-                    </div>
-                    <div class="contenedor__carrito-productos-item-subtotal">
-                        <small>Sub Total</small>
-                        <p>$15000</p>
-                    </div>
-                    <button class="contenedor__carrito-productos-item-eliminar"><i class="bi bi-trash"></i></button>
-                </div>
-
+            <div id="carrito-productos" class="contenedor__carrito-productos disabled">
+                <!-- Se completa con el JS Carrito -->
             </div>
-            <div class="contenedor__carrito__acciones disabled">
+            <div id="carrito-acciones" class="contenedor__carrito__acciones disabled">
                 <div class="contenedor__carrito__acciones-izquierda">
                     <button class="contenedor__carrito__acciones-izquierda-vaciar">Vaciar Carrito</button>
                 </div>
@@ -125,7 +61,7 @@
                     <button class="contenedor__carrito__acciones-derecha-comprar">Comprar ahora</button>
                 </div>
             </div>
-            <p class="carrito__comprado disabled">Muchas gracias por su compra! <i class="bi bi-emoji-sunglasses"></i></p>
+            <p id="carrito-comprado" class="carrito__comprado disabled">Muchas gracias por su compra! <i class="bi bi-emoji-sunglasses"></i></p>
         </div>
     </main>
     <footer class="footer">

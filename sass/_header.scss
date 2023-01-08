@@ -1,12 +1,14 @@
 .header {
     background-color: $ColorHeader;
-    margin-bottom: 2rem;
+    position: sticky;
+    top: 0;
+    height: 17.5vh;
 
     &__encabezado {
         text-align: center;
         font-family: $FuenteSecundaria;
         font-size: 14px;
-        background-color: $ColorSecundario;
+        background-color: $ColorSecundario; 
         color: white;
         padding: 20px;
         margin-bottom: 30px;
