@@ -1,30 +1,29 @@
 let productosEnCarrito = localStorage.getItem("productos-en-carrito");
-productosEnCarrito = JSON.parse(productosEnCarrito);
 
 const contenedorCarritoVacio = document.querySelector("#carrito-vacio");
 const contenedorCarritoProductos = document.querySelector("#carrito-productos");
 const contenedorCarritoAcciones = document.querySelector("#carrito-acciones");
 const contenedorCarritoComprado = document.querySelector("#carrito-comprado");
 let botonesEliminar = document.querySelectorAll(".contenedor__carrito-productos-item-eliminar");
-const botonVaciar = document.querySelector("#carrito-acciones-vaciar");
+const botonVaciar = document.querySelector("#boton-vaciar");
 const contenedorTotal = document.querySelector("#total");
-const botonComprar = document.querySelector("#comprar");
 
 
+ 
 function cargarProductosCarrito() {
-    if (productosEnCarrito && productosEnCarrito.length > 0) {
+    if(productosEnCarrito && productosEnCarrito.length > 0){
 
         contenedorCarritoVacio.classList.add("disabled");
         contenedorCarritoProductos.classList.remove("disabled");
         contenedorCarritoAcciones.classList.remove("disabled");
         contenedorCarritoComprado.classList.add("disabled");
-    
+
         contenedorCarritoProductos.innerHTML = "";
-    
+
         productosEnCarrito.forEach(producto => {
-    
+
             const div = document.createElement("div");
-            div.classList.add("carrito-producto");
+            div.classList.add("contenedor__carrito-productos");
             div.innerHTML = `
                     <div class="contenedor__carrito-productos-item">
                         <img class="contenedor__carrito-productos-item-img" src="${producto.imagen}" alt="${producto.titulo}">
@@ -44,29 +43,33 @@ function cargarProductosCarrito() {
                         <small>Sub Total</small>
                         <p>$${producto.precio * producto.cantidad}</p>
                         </div>
-                        <button class="carrito-producto-eliminar contenedor__carrito-productos-item-eliminar" id="${producto.id}"><i class="bi bi-trash"></i></button>
+                        <button class="contenedor__carrito-productos-item-eliminar" id="${producto.id}"><i class="bi bi-trash"></i></button>
                     </div>
             `;
-    
+
             contenedorCarritoProductos.append(div);
-        })
-    
-    actualizarBotonesEliminar();
-    actualizarTotal();
-	
+
+         })
+        
+         actualizarBotonesEliminar();
+
     } else {
+
         contenedorCarritoVacio.classList.remove("disabled");
         contenedorCarritoProductos.classList.add("disabled");
         contenedorCarritoAcciones.classList.add("disabled");
         contenedorCarritoComprado.classList.add("disabled");
+
     }
 
+
+    
 }
 
 cargarProductosCarrito();
 
 function actualizarBotonesEliminar() {
-    botonesEliminar = document.querySelectorAll(".carrito-producto-eliminar");
+    botonesEliminar = document.querySelectorAll(".contenedor__carrito-productos-item-eliminar");
 
     botonesEliminar.forEach(boton => {
         boton.addEventListener("click", eliminarDelCarrito);
@@ -76,12 +79,11 @@ function actualizarBotonesEliminar() {
 function eliminarDelCarrito(e) {
     const idBoton = e.currentTarget.id;
     const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
-    
+
     productosEnCarrito.splice(index, 1);
     cargarProductosCarrito();
 
-    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
-
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito)); 
 }
 
 botonVaciar.addEventListener("click", vaciarCarrito);
@@ -90,7 +92,6 @@ function vaciarCarrito() {
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
     cargarProductosCarrito();
 }
-
 
 function actualizarTotal() {
     const totalCalculado = productosEnCarrito.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0);
@@ -109,3 +110,6 @@ function comprarCarrito() {
     contenedorCarritoComprado.classList.remove("disabled");
 
 }
+
+
+
