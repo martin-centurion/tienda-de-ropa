@@ -2,7 +2,7 @@
     background-color: $ColorHeader;
     position: sticky;
     top: 0;
-    height: 17.5vh;
+    height: 11rem;
 
     &__encabezado {
         text-align: center;
@@ -46,7 +46,7 @@
     
                             &:hover{
                                 color: $ColorPrimario;
-                                border-bottom: solid 2px $ColorPrimario;
+                                border-bottom: solid 3px $ColorPrimario;
                                 padding-bottom: 10px;
                             }
                         }
@@ -54,14 +54,14 @@
                 }
 
                 &-cantidad {
-                    background-color: $ColorTerciarioOscuro;
+                    background-color: $ColorTerciario;
                     color: $ColorPrimario;
-                    padding: .25rem;
-                    border-radius: .25rem;
+                    padding: .75rem;
+                    border-radius: .75rem;
                 }
                 .active {
                     color: $ColorPrimario;
-                    border-bottom: solid 2px $ColorTerciarioOscuro;
+                    border-bottom: solid 3px $ColorTerciarioOscuro;
                     padding-bottom: 10px;
                 }
 

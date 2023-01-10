@@ -32,18 +32,8 @@ const productos = [
         precio: 5000
     },
     {
-        id: "buzo-negro",
-        titulo: "Buzo negro",
-        imagen: "../img/productos/buzos/buzo-negro.jpg",
-        categoria: {
-            nombre: "Buzos",
-            id: "buzos"
-        },
-        precio: 5000
-    },
-    {
         id: "buzo-rojo-estampado",
-        titulo: "Buzo rojo-estampado",
+        titulo: "Buzo Rojo Estampado",
         imagen: "../img/productos/buzos/buzo-rojo-estampado.jpg",
         categoria: {
             nombre: "Buzos",
@@ -186,8 +176,9 @@ function actualizarBotonesAgregar() {
 
     botonesAgregar.forEach(boton => {
         boton.addEventListener("click", agregarAlCarrito);
+        
     });
-}
+};
 
 let productosEnCarrito;
 
@@ -199,7 +190,8 @@ if(productosEnCarritoLS){
 
 } else {
     productosEnCarrito = [];
-}
+    
+};
 
 
 function agregarAlCarrito(e) {
@@ -210,18 +202,24 @@ function agregarAlCarrito(e) {
     if(productosEnCarrito.some(producto => producto.id === idBoton)) {
         const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
         productosEnCarrito[index].cantidad++;
+        
 
     } else {
         productoAgregado.cantidad = 1;
         productosEnCarrito.push(productoAgregado);
+        
+        
     }   
 
     actualizarCantidad();
 
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
-}
+};
+
 
 function actualizarCantidad() {
     let nuevaCantidad = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     cantidad.innerText = nuevaCantidad;
-}
+
+    localStorage.setItem("cantidad-productos", (nuevaCantidad));
+};

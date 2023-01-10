@@ -1,6 +1,15 @@
 let productosEnCarrito = localStorage.getItem("productos-en-carrito");
 productosEnCarrito = JSON.parse(productosEnCarrito);
 
+let nuevaCantidadJS = localStorage.getItem("cantidad-productos");
+nuevaCantidadJS = JSON.parse(nuevaCantidadJS);
+
+const actualizarCantidadJS = document.querySelector("#cantidad");
+nuevaCantidadJS.cantidad = actualizarCantidadJS;
+actualizarCantidadJS.innerText = nuevaCantidadJS;
+
+console.log(nuevaCantidadJS);
+
 const contenedorCarritoVacio = document.querySelector("#carrito-vacio");
 const contenedorCarritoProductos = document.querySelector("#carrito-productos");
 const contenedorCarritoAcciones = document.querySelector("#carrito-acciones");
@@ -24,12 +33,13 @@ function cargarProductosCarrito() {
         productosEnCarrito.forEach(producto => {
     
             const div = document.createElement("div");
-            div.classList.add("carrito-producto");
+            div.classList.add("contenedor__carrito");
             div.innerHTML = `
                     <div class="contenedor__carrito-productos-item">
+                        <button class="carrito-producto-eliminar contenedor__carrito-productos-item-eliminar" id="${producto.id}"><i class="bi bi-x-circle"></i></button>
                         <img class="contenedor__carrito-productos-item-img" src="${producto.imagen}" alt="${producto.titulo}">
                         <div class="contenedor__carrito-productos-item-titulo">
-                            <small>Titulo</small>
+                            <small>Producto</small>
                             <h3>${producto.titulo}</h3>
                         </div>
                         <div class="contenedor__carrito-productos-item-cantidad">
@@ -44,7 +54,6 @@ function cargarProductosCarrito() {
                         <small>Sub Total</small>
                         <p>$${producto.precio * producto.cantidad}</p>
                         </div>
-                        <button class="carrito-producto-eliminar contenedor__carrito-productos-item-eliminar" id="${producto.id}"><i class="bi bi-trash"></i></button>
                     </div>
             `;
     
@@ -81,7 +90,6 @@ function eliminarDelCarrito(e) {
     cargarProductosCarrito();
 
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
-
 }
 
 botonVaciar.addEventListener("click", vaciarCarrito);
@@ -103,9 +111,12 @@ function comprarCarrito() {
     productosEnCarrito.length = 0;
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
     
+    
     contenedorCarritoVacio.classList.add("disabled");
     contenedorCarritoProductos.classList.add("disabled");
     contenedorCarritoAcciones.classList.add("disabled");
     contenedorCarritoComprado.classList.remove("disabled");
 
 }
+
+
