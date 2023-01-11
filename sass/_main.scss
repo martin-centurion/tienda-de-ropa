@@ -210,6 +210,12 @@
                         }
              }
 
+             i {
+                margin-left: 1rem;
+                font-size: 1rem;
+                text-align: center;
+             }
+
             &__content-img {
                  width: 500px;
 
@@ -218,7 +224,7 @@
 }
 
 .tienda {
-    
+    justify-content: space-around;
     &-header {
         margin: 4rem 0 2rem;
         
@@ -241,15 +247,14 @@
 
         ul {
             display: flex;
-            justify-content: baseline;
+            justify-content: space-between;
 
             li {
-                font-size: 1rem;
+                font-size: .75rem;
                 text-transform: uppercase;
                 font-family: $FuentePrimaria;
                 letter-spacing: .25rem;
                 margin-top: 2rem;
-                margin-right: 2rem;
 
                 a {
                     color: $ColorSecundario;
@@ -263,7 +268,7 @@
     }
 
     &__productos {
-
+            align-items: center;
         h3 {
             font-size: 2rem;
             margin-top: 2rem;
@@ -272,7 +277,7 @@
         &-content {
             display: flex;
             flex-flow: row wrap;
-            justify-content: space-between;
+            justify-content: space-around;
             color: $ColorSecundario;
 
             &-btn-vaciar {
@@ -298,7 +303,7 @@
             }
 
             &-img {
-                text-align: center;
+                justify-content: center;
                 margin: 2rem 0 2rem;
                 img{
                     width: 300px;

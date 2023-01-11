@@ -16,11 +16,7 @@ function actualizarCantidadLS() {
     let nuevaCantidadLS = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     cantidadLS.innerText = nuevaCantidadLS;
 
-    console.log(nuevaCantidadLS);
-
     localStorage.setItem("cantidad-productos", JSON.stringify(nuevaCantidadLS));
-
-    console.log(nuevaCantidadLS);
 };
 
 
@@ -116,6 +112,7 @@ function comprarCarrito() {
 
     productosEnCarrito.length = 0;
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+    actualizarCantidadLS();
     
     
     contenedorCarritoVacio.classList.add("disabled");

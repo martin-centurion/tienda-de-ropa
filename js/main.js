@@ -12,6 +12,16 @@ const productos = [
         precio: 5000
     },
     {
+        id: "buzo-azul",
+        titulo: "Buzo Azul",
+        imagen: "../img/productos/buzos/buzo-azul.jpg",
+        categoria: {
+            nombre: "Buzos",
+            id: "nuevo"
+        },
+        precio: 5000
+    },
+    {
         id: "buzo-marron",
         titulo: "Buzo marron",
         imagen: "../img/productos/buzos/buzo-marron.jpg",
@@ -107,10 +117,21 @@ const productos = [
         imagen: "../img/productos/camisacos/camisaco-rojo-negro.jpg",
         categoria: {
             nombre: "Camisacos",
-            id: "camisacos"
+            id: "camisacos",
         },
         precio: 9000
     },
+    {
+        id: "camisaco-rojo-negro",
+        titulo: "Camisaco Rojo y Negro",
+        imagen: "../img/productos/camisacos/camisaco-rojo-negro.jpg",
+        categoria: {
+            nombre: "Camisacos",
+            id: "nuevo",
+        },
+        precio: 9000
+    },
+    
 
 ];
 
