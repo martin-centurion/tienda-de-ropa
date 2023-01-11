@@ -1,14 +1,6 @@
 let productosEnCarrito = localStorage.getItem("productos-en-carrito");
 productosEnCarrito = JSON.parse(productosEnCarrito);
 
-let nuevaCantidadJS = localStorage.getItem("cantidad-productos");
-nuevaCantidadJS = JSON.parse(nuevaCantidadJS);
-
-const actualizarCantidadJS = document.querySelector("#cantidad");
-nuevaCantidadJS.cantidad = actualizarCantidadJS;
-actualizarCantidadJS.innerText = nuevaCantidadJS;
-
-console.log(nuevaCantidadJS);
 
 const contenedorCarritoVacio = document.querySelector("#carrito-vacio");
 const contenedorCarritoProductos = document.querySelector("#carrito-productos");
@@ -18,6 +10,18 @@ let botonesEliminar = document.querySelectorAll(".contenedor__carrito-productos-
 const botonVaciar = document.querySelector("#carrito-acciones-vaciar");
 const contenedorTotal = document.querySelector("#total");
 const botonComprar = document.querySelector("#comprar");
+const cantidadLS = document.querySelector("#cantidad");
+
+function actualizarCantidadLS() {
+    let nuevaCantidadLS = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
+    cantidadLS.innerText = nuevaCantidadLS;
+
+    console.log(nuevaCantidadLS);
+
+    localStorage.setItem("cantidad-productos", JSON.stringify(nuevaCantidadLS));
+
+    console.log(nuevaCantidadLS);
+};
 
 
 function cargarProductosCarrito() {
@@ -88,6 +92,7 @@ function eliminarDelCarrito(e) {
     
     productosEnCarrito.splice(index, 1);
     cargarProductosCarrito();
+    actualizarCantidadLS();
 
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
 }
@@ -97,6 +102,7 @@ function vaciarCarrito() {
     productosEnCarrito.length = 0;
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
     cargarProductosCarrito();
+    actualizarCantidadLS();
 }
 
 
