@@ -1,6 +1,9 @@
 [
     {"id": "buzo-azul", "titulo": "Buzo Azul", "imagen": "../img/productos/buzos/buzo-azul.jpg", "precio": 1500},
     {"id": "buzo-marron", "titulo": "Buzo marron", "imagen": "../img/productos/buzos/buzo-marron.jpg", "precio": 1500},
+    {"id": "buzo-negro", "titulo": "Buzo negro", "imagen": "../img/productos/buzos/buzo-negro.jpg", "precio": 1500},
+    {"id": "buzo-azul", "titulo": "Buzo Azul", "imagen": "../img/productos/buzos/buzo-azul.jpg", "precio": 1500},
+    {"id": "buzo-marron", "titulo": "Buzo marron", "imagen": "../img/productos/buzos/buzo-marron.jpg", "precio": 1500},
     {"id": "buzo-negro", "titulo": "Buzo negro", "imagen": "../img/productos/buzos/buzo-negro.jpg", "precio": 1500}
     
     
