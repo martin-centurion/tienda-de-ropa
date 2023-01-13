@@ -1,129 +1,3 @@
-/* //Productos
-const productos = [
-    // Buzos
-    {
-        id: "buzo-azul",
-        titulo: "Buzo Azul",
-        imagen: "../img/productos/buzos/buzo-azul.jpg",
-        categoria: {
-            nombre: "Buzos",
-            id: "buzos"
-        },
-        precio: 5000
-    },
-    {
-        id: "buzo-marron",
-        titulo: "Buzo marron",
-        imagen: "../img/productos/buzos/buzo-marron.jpg",
-        categoria: {
-            nombre: "Buzos",
-            id: "buzos"
-        },
-        precio: 5500
-    },
-    {
-        id: "buzo-negro",
-        titulo: "Buzo Negro",
-        imagen: "../img/productos/buzos/buzo-negro.jpg",
-        categoria: {
-            nombre: "Buzos",
-            id: "buzos"
-        },
-        precio: 5000
-    },
-    {
-        id: "buzo-rojo-estampado",
-        titulo: "Buzo Rojo Estampado",
-        imagen: "../img/productos/buzos/buzo-rojo-estampado.jpg",
-        categoria: {
-            nombre: "Buzos",
-            id: "buzos"
-        },
-        precio: 5000
-    },
-    {
-        id: "buzo-salmon",
-        titulo: "Buzo salmon",
-        imagen: "../img/productos/buzos/buzo-salmon.jpg",
-        categoria: {
-            nombre: "Buzos",
-            id: "buzos"
-        },
-        precio: 5000
-    },
-    {
-        id: "buzo-violeta",
-        titulo: "Buzo violeta",
-        imagen: "../img/productos/buzos/buzo-violeta.jpg",
-        categoria: {
-            nombre: "Buzos",
-            id: "buzos"
-        },
-        precio: 5000
-    },
-    {
-        id: "buzo-verde-oscuro",
-        titulo: "Buzo Verde Oscuro",
-        imagen: "../img/productos/buzos/buzo-verde-oscuro.jpg",
-        categoria: {
-            nombre: "Buzos",
-            id: "buzos"
-        },
-        precio: 5000
-    },
-    {
-        id: "camisaco-blanco-negro",
-        titulo: "Camisaco Negro y Blanco",
-        imagen: "../img/productos/camisacos/camisaco-blanco-negro.jpg",
-        categoria: {
-            nombre: "Camisacos",
-            id: "camisacos"
-        },
-        precio: 9000
-    },
-    {
-        id: "camisaco-pastel-combinado",
-        titulo: "Camisaco Pastel",
-        imagen: "../img/productos/camisacos/camisaco-pastel-combinado.jpg",
-        categoria: {
-            nombre: "Camisacos",
-            id: "camisacos"
-        },
-        precio: 9000
-    },
-    {
-        id: "camisaco-pastel-oscuro",
-        titulo: "Camisaco Pastel Oscuro",
-        imagen: "../img/productos/camisacos/camisaco-pastel-oscuro.jpg",
-        categoria: {
-            nombre: "Camisacos",
-            id: "camisacos"
-        },
-        precio: 9000
-    },
-    {
-        id: "camisaco-rojo-negro",
-        titulo: "Camisaco Rojo y Negro",
-        imagen: "../img/productos/camisacos/camisaco-rojo-negro.jpg",
-        categoria: {
-            nombre: "Camisacos",
-            id: "camisacos",
-        },
-        precio: 9000
-    },
-    {
-        id: "camisaco-rojo-negro",
-        titulo: "Camisaco Rojo y Negro",
-        imagen: "../img/productos/camisacos/camisaco-rojo-negro.jpg",
-        categoria: {
-            nombre: "Camisacos",
-            id: "nuevo",
-        },
-        precio: 9000
-    },
-    
-
-]; */
 
 const contenedorProductos = document.getElementById("contenedorProductos");
 const contenedorProductosListado = "../json/productos.json";
@@ -133,15 +7,19 @@ let botonesAgregar = document.querySelectorAll(".producto-agregar");
 const cantidad = document.querySelector("#cantidad");
 let productos = [];
 
-
 fetch(contenedorProductosListado)
     .then(response => response.json())
     .then(datos => {
-        productos = datos;
+        /* productos = datos;
         mostrarProductos(datos);
         console.log(datos);
 
-    })
+    }) */
+
+    productos = datos;
+    mostrarProductos(datos);
+    console.log(datos);
+})
     .catch(error => console.log(error))
     .finally(()=> console.log("Carga de productos finalizada"));
     
@@ -191,7 +69,7 @@ botonesCategorias.forEach(boton => {
             mostrarProductos(productosBoton);
         } else {
             tituloPrincipal.innerHTML = "Todos los Productos";
-            mostrarProductos();
+            mostrarProductos(productos);
         }
         
     })
