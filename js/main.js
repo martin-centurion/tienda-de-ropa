@@ -10,16 +10,10 @@ let productos = [];
 fetch(contenedorProductosListado)
     .then(response => response.json())
     .then(datos => {
-        /* productos = datos;
+        productos = datos;
         mostrarProductos(datos);
-        console.log(datos);
-
-    }) */
-
-    productos = datos;
-    mostrarProductos(datos);
-    console.log(datos);
 })
+
     .catch(error => console.log(error))
     .finally(()=> console.log("Carga de productos finalizada"));
     
@@ -101,19 +95,37 @@ if(productosEnCarritoLS){
 function agregarAlCarrito(e) {
 
     const idBoton = e.currentTarget.id;
-    const productoAgregado = productos.find(producto => producto.id === idBoton)
+    const productoAgregado = productos.find(producto => producto.id === idBoton);
+
+    Toastify({
+        text: `Producto agregado`,
+        duration: 3000,
+        close: true,
+        gravity: "bottom",
+        position: "left",
+        stopOnFocus: true,
+        style: {
+          background: "rgb(39, 39, 39)",
+          color: "rgb(255, 255, 255)",
+          textTransform: "uppercase",
+          fontSize: ".75rem",
+        },
+        offset: {
+            x: "1.5rem",
+            y: "1.5rem"
+          },
+        onClick: function(){}
+      }).showToast();
 
     if(productosEnCarrito.some(producto => producto.id === idBoton)) {
         const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
         productosEnCarrito[index].cantidad++;
         
-
-    } else {
+        } else {
         productoAgregado.cantidad = 1;
         productosEnCarrito.push(productoAgregado);
-        
-        
-    }   
+
+        }   
 
     actualizarCantidad();
 

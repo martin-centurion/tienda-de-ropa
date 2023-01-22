@@ -383,8 +383,11 @@ background-color: $ColorIconos;
 }
 
 .btn-carrito {
-@extend .btn-rrss;
-background-color: $ColorTerciarioOscuro;
+    background-color: $ColorIconos;
+    color: white;
+    padding: .75rem;
+    border-top-left-radius: .75rem;
+    border-bottom-left-radius: .75rem;
 }
 
 /* CARRITO */

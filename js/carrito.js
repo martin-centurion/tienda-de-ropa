@@ -75,14 +75,38 @@ function cargarProductosCarrito() {
 cargarProductosCarrito();
 
 function actualizarBotonesEliminar() {
+
+
     botonesEliminar = document.querySelectorAll(".carrito-producto-eliminar");
 
+    
     botonesEliminar.forEach(boton => {
         boton.addEventListener("click", eliminarDelCarrito);
+        
     });
 }
 
 function eliminarDelCarrito(e) {
+    Toastify({
+        text: `Producto Eliminado`,
+        duration: 3000,
+        close: true,
+        gravity: "bottom",
+        position: "left",
+        stopOnFocus: true,
+        style: {
+          background: "rgb(39, 39, 39)",
+          color: "rgb(255, 255, 255)",
+          textTransform: "uppercase",
+          fontSize: ".75rem",
+        },
+        offset: {
+            x: "1.5rem",
+            y: "1.5rem" 
+          },
+        onClick: function(){}
+      }).showToast();
+      
     const idBoton = e.currentTarget.id;
     const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
     
@@ -95,10 +119,26 @@ function eliminarDelCarrito(e) {
 
 botonVaciar.addEventListener("click", vaciarCarrito);
 function vaciarCarrito() {
-    productosEnCarrito.length = 0;
-    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
-    cargarProductosCarrito();
-    actualizarCantidadLS();
+
+    Swal.fire({
+        title: '¿Estás seguro?',
+        icon: 'question',
+        html:`Se van a borrar ${productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0)} productos`,
+        showCancelButton: true,
+        focusConfirm: false,
+        confirmButtonText: 'Si',
+        cancelButtonText: 'No',
+      }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+            productosEnCarrito.length = 0;
+            localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+            cargarProductosCarrito();
+            actualizarCantidadLS();
+        }
+      })
+
+    
 }
 
 
@@ -109,6 +149,12 @@ function actualizarTotal() {
 
 botonComprar.addEventListener("click", comprarCarrito);
 function comprarCarrito() {
+
+    Swal.fire(
+        'Gracias por su compra!',
+        'Tienda de Ropa',
+        'success'
+      )
 
     productosEnCarrito.length = 0;
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));

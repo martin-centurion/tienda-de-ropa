@@ -54,10 +54,11 @@
                 }
 
                 &-cantidad {
-                    background-color: $ColorTerciario;
+                    background-color: $ColorTerciarioOscuro;
                     color: $ColorPrimario;
                     padding: .75rem;
-                    border-radius: .75rem;
+                    border-top-right-radius: .75rem;
+                    border-bottom-right-radius: .75rem;
                 }
                 .active {
                     color: $ColorPrimario;
@@ -74,7 +75,7 @@
                 }
 
                 li {
-                    margin: 0 1rem;
+                    margin: 0 .5rem;
                 }
             }
             
