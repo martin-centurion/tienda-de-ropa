@@ -640,16 +640,21 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center; }
-  .open-menu, .close-menu {
+  .open-menu {
     background-color: transparent;
     color: #494949;
     border: 0;
     font-size: 2rem;
     cursor: pointer; }
   .close-menu {
+    background-color: transparent;
+    color: white;
+    border: 0;
+    font-size: 2rem;
+    cursor: pointer;
     display: block;
     position: absolute;
-    top: 1rem;
+    top: .7rem;
     right: 1rem; }
   .banner {
     width: 100%; }

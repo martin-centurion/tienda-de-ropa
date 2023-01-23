@@ -56,7 +56,7 @@
         align-items: center;
     }
 
-    .open-menu, .close-menu {
+    .open-menu {
         background-color: transparent;
         color: $ColorIconos;
         border: 0;
@@ -65,9 +65,14 @@
     }
 
     .close-menu {
+        background-color: transparent;
+        color: $ColorHeader;
+        border: 0;
+        font-size: 2rem;
+        cursor: pointer;
         display: block;
         position: absolute;
-        top: 1rem;
+        top: .7rem;
         right: 1rem;
     }
 
