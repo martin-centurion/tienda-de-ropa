@@ -311,6 +311,16 @@ body {
       text-align: center; }
     .info__content__content-img {
       width: 500px; }
+    .info__content-form {
+      width: 500px; }
+      .info__content-form form {
+        font-size: 1.2rem;
+        display: flex;
+        flex-flow: column wrap; }
+        .info__content-form form label {
+          margin-bottom: 1rem; }
+        .info__content-form form input {
+          margin-bottom: 1rem; }
 
 .tienda {
   justify-content: space-around; }
@@ -502,6 +512,67 @@ body {
 
 .disabled {
   display: none; }
+
+/* FORMULARIO */
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  .form__content {
+    padding: 50px;
+    background-color: rgba(202, 231, 134, 0.6);
+    width: 800px;
+    height: 750px; }
+    .form__content h2 {
+      font-family: "DM Serif Display", serif;
+      font-size: 60px;
+      font-weight: 400;
+      margin-bottom: 40px; }
+    .form__content p {
+      font-family: "Poppins", sans-serif;
+      font-size: 18px;
+      margin-bottom: 100px; }
+    .form__content__content-img {
+      width: 500px; }
+    .form__content-campos {
+      width: 500px; }
+      .form__content-campos form {
+        font-size: 1.2rem;
+        display: flex;
+        flex-flow: column wrap; }
+        .form__content-campos form label {
+          margin-bottom: 1rem; }
+        .form__content-campos form input {
+          margin-bottom: 1rem;
+          height: 30px;
+          font-size: 1rem;
+          font-family: "Roboto", sans-serif;
+          border: solid .05rem black;
+          padding: .5rem; }
+        .form__content-campos form textarea {
+          margin-bottom: 1rem;
+          height: 150px;
+          font-size: 1rem;
+          font-family: "Roboto", sans-serif;
+          border: solid .05rem black;
+          padding: .5rem; }
+        .form__content-campos form button {
+          margin-top: .8rem;
+          color: white;
+          font-family: "Roboto", sans-serif;
+          background-color: #272727;
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: .8rem;
+          letter-spacing: 3px;
+          text-align: center;
+          padding: 15px;
+          border: solid .15rem black;
+          width: 200px;
+          transition: all 0.3s;
+          cursor: pointer; }
+          .form__content-campos form button:hover {
+            background-color: transparent;
+            color: black; }
 
 .footer {
   margin-top: 40px;
